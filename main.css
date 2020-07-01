@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    /*background-image: linear-gradient(120deg,#15b5f4,#2571bf);*/
+    background-color: #2994ff;
+	color: black;
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+header {
+    margin-bottom: 20px;
+    background-color: #dbe9f4;
+    padding: 10px 0 10px 0;
+}
+
+.container {
+	justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+form input, 
+form button {
+	padding: 0.5rem;
+	font-size: 2rem;
+	border: none;
+    background: #dbe9f4;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 60%;
+}
+
+form button {
+	color: blue;
+	background: #dbe9f4;
+	cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+	background: blue;
+	color: #dbe9f4;
+}
+
+.btn-group {
+    margin: 20px 0 20px 0;
+}
+
+.btn-group button {
+    color: blue;
+	background: #dbe9f4;
+	cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 5px;
+    padding: 5px;
+    border: none;
+}
+
+.btn-group button:hover {
+	background: blue;
+	color: #dbe9f4;
+}
+
+.person-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.person {
+	margin: 0.5rem;
+	background: #dbe9f4;
+	color: black;
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.5s ease;
+}
+
+.person li {
+	flex: 1;
+}
+
+.trash-btn {
+	color: blue;
+	background: #dbe9f4;
+	border: none;
+	padding: 1rem;
+	cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.person-item {
+	padding: 0rem 0.5rem;
+}
+
+.fa-trash {
+	pointer-events: none;
+}
+
+.trash-btn:hover {
+	background: blue;
+	color: #dbe9f4;
+}
+
+.fall {
+	transform: translateY(8rem) rotateZ(20deg);
+	opacity: 0;
+}
+
+.team {
+    background: #dbe9f4;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #dbe9f4;
+    text-align: center;
+}

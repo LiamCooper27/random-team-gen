@@ -171,17 +171,24 @@ footer p {
 
 /* input spinner style */
 
+.team-amount {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.team-amount button, 
+.team-amount input {
+    padding: 0.5rem;
+	font-size: 2rem;
+	border: none;
+}
+
 .team-amount .count {
     color: #000;
-    background: none;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 30px;
-    padding: 0 2px;
-    min-width: 35px;
+    background: #dbe9f4;
     text-align: center;
+    width: 10%;
 }
 
 .team-amount .plus {
@@ -190,27 +197,18 @@ footer p {
 	cursor: pointer;
     transition: all 0.3s ease;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
-    width: 30px;
-    height: 30px;
-    font: 30px/1 Arial,sans-serif;
     text-align: center;
-    border-radius: 50%;
+    width: 5%;
 }
 
 .team-amount .minus {
     color: blue;
     background: #dbe9f4;
+	cursor: pointer;
+    transition: all 0.3s ease;
     cursor: pointer;
-    display: inline-block;
-    vertical-align: top;
-    width: 30px;
-    height: 30px;
-    font: 30px/1 Arial,sans-serif;
     text-align: center;
-    border-radius: 50%;
-    background-clip: padding-box;
+    width: 5%;
 }
 
 .minus:hover{

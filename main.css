@@ -154,7 +154,7 @@ input[type=text] {
 
 .team {
     background: #dbe9f4;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 15px;
 }
 
@@ -167,6 +167,7 @@ input[type=text] {
 
 .team p {
     overflow: scroll;
+    margin: 5px;
 }
 
 footer {

@@ -167,7 +167,10 @@ input[type=text] {
 
 .team p {
     overflow: scroll;
-    margin: 5px 20px 5px 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
 }
 
 footer {

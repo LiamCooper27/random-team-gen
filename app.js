@@ -3,27 +3,34 @@ const personInput = document.querySelector('.person-input');
 const addPersonButton = document.querySelector('.add-person-button');
 const personList = document.querySelector('.person-list');
 const randomButton = document.querySelector('.randomize-button');
-const resetButton = document.querySelector('.reset-button');
 const teamList = document.querySelector('.teams-list');
-//const teamAmount = document.querySelector('.amount-selector');
-
 const teamAmount = document.querySelector('.count');
-
 const incButton = document.querySelector('.plus');
 const decButton = document.querySelector('.minus');
+const inputError = document.querySelector('.input-error');
 
 // event listeners
 addPersonButton.addEventListener('click', addPerson);
 personList.addEventListener('click', deletePerson);
 randomButton.addEventListener('click', randomizeTeams);
-resetButton.addEventListener('click', resetTeams);
 incButton.addEventListener('click', incrementTeam);
 decButton.addEventListener('click', decrementTeam);
 
 // functions
 function addPerson(e) {
+	// empty error message 
+	inputError.innerHTML = "";
 	// prevent form from submitting
 	e.preventDefault();
+	// check if input has value
+	if (!(personInput.value.length > 0 && personInput.value.length <= 50)) {
+		const errorMessage = document.createElement('p');
+		errorMessage.innerText = "Error: Name not valid";
+		errorMessage.classList.add('error-message');
+		inputError.append(errorMessage);
+
+		return false;
+	} 
 	// person div
     const personDiv = document.createElement('div');
     personDiv.classList.add('person');
@@ -64,28 +71,29 @@ function deletePerson(event) {
 }
 
 function randomizeTeams(e) {
+	// turn people list into array
+	let people = [].slice.call(document.getElementById('persons').getElementsByTagName('li'));
+	const peopleTotal = people.length;
+
 	const teams = teamList.getElementsByTagName('div');
 	if (teams.length != 0) {
 		resetTeams();
 	}
 
+	// check if teams can be generated
 	const teamNumber = parseInt(teamAmount.value);
-	if (teamNumber >= 1 && teamNumber <= 10) {
+	if (teamNumber >= 1 && teamNumber <= 10 && peopleTotal > 0) {
 		generateTeams(teamNumber);
 	} else {
-		console.log('Team amount out of range');
+		console.log('Team amount out of range or no people available');
+		return false;
 	}
 
-	let people = [].slice.call(document.getElementById('persons').getElementsByTagName('li'));
+	// randomize array
 	shuffleArray(people);
-
-	const peopleTotal = people.length;
 
 	let teamPick = 0;
 	for (j=0; j<peopleTotal; j++) {
-
-		//let peopleLeft = people.length;
-		//let randomIndex = Math.floor(Math.random() * Math.floor(peopleLeft));
 
 		const teamMember = document.createElement('p');
 		teamMember.innerText = people[0].innerText;

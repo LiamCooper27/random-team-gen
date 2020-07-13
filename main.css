@@ -14,7 +14,7 @@ body {
 	color: black;
     position: relative;
     margin: 0;
-    padding-bottom: 6rem;
+    padding-bottom: 4rem;
     min-height: 100%;
 }
 
@@ -87,8 +87,9 @@ input[type=text] {
 	cursor: pointer;
     transition: all 0.3s ease;
     margin: 5px;
-    padding: 5px;
+    padding: 0.5rem;
     border: none;
+	font-size: 2rem;
 }
 
 .btn-group button:hover {
@@ -101,7 +102,7 @@ input[type=text] {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0;
+    margin-bottom: 12px;
 }
 
 .person {
@@ -147,8 +148,27 @@ input[type=text] {
 	opacity: 0;
 }
 
+.teams-list {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 60%;
+}
+
 .team {
     background: #dbe9f4;
+    margin-bottom: 5px;
+    border-radius: 15px;
+}
+
+.team h3 {
+    border-bottom: 2px solid blue;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
@@ -159,6 +179,8 @@ footer {
     padding: 1rem;
     background-color: #dbe9f4;
     text-align: center;
+    margin: 0;
+    height: 4rem;
 }
 
 footer p {
@@ -167,6 +189,18 @@ footer p {
 
 .team-amount {
     margin-bottom: 20px;
+}
+
+.input-error {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: white;
+    background: red;
 }
 
 /* input spinner style */

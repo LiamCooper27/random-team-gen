@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    /*background-image: linear-gradient(120deg,#15b5f4,#2571bf);*/
     background-color: #2994ff;
 	color: black;
     position: relative;
@@ -69,14 +68,6 @@ input[type=text] {
     appearance: none;  
 }
 
-/*input[type=number] {
-    padding: 0.5rem;
-	font-size: 2rem;
-	border: none;
-    margin-bottom: 20px;
-    background: #dbe9f4;
-}*/
-
 .btn-group {
     margin: 0 0 20px 0;
 }
@@ -113,11 +104,14 @@ input[type=text] {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    max-width: 30%;
 }
 
 .person li {
-	flex: 1;
+    flex: 1;
+    overflow: scroll;
 }
 
 .trash-btn {
@@ -169,6 +163,10 @@ input[type=text] {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.team p {
+    overflow: scroll;
 }
 
 footer {

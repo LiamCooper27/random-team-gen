@@ -23,7 +23,7 @@ function addPerson(e) {
 	// prevent form from submitting
 	e.preventDefault();
 	// check if input has value
-	if (!(personInput.value.length > 0 && personInput.value.length <= 50)) {
+	if (!(personInput.value.length > 0 && personInput.value.length <=50)) {
 		const errorMessage = document.createElement('p');
 		errorMessage.innerText = "Error: Name not valid";
 		errorMessage.classList.add('error-message');
